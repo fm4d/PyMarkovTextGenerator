@@ -26,7 +26,7 @@ class Markov(object):
 
         if key in self._database:
             for pos, val in enumerate(self._database[key]):
-                if val[0] == value:
+                if val[0] == value
                     val_pos = pos
 
             if val_pos is None:
@@ -103,7 +103,6 @@ class Markov(object):
                     value = value[0]
                 quote += " " + value
             except KeyError:
-                print "now"
                 break
 
             if endf(quote):

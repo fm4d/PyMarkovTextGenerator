@@ -22,8 +22,8 @@ etc.
 Level 1 will produce very random mishmash of words, level 2 the standart pseudo-real text and then every next  
 level will make the text more "connected", but its basically useless for our purpose without a very large text pool.  
 
-Then continue with parsing any ammount of text you like with parse(text) and generate random text with generate().  
-Generate takes two arguments - startf and endf. Startf is used to find beggining of string. Default value is 
+Then continue with parsing any ammount of text you like with parse(text) and generate random text with
+generate(). Generate takes two arguments - startf and endf. Startf is used to find beggining of string. Default value is 
 ```python
 lambda: random.choice(filter(lambda v: v[0][0].isupper(), self._database))
 ```

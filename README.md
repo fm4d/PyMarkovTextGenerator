@@ -8,8 +8,8 @@ Usage
 -----
 
 Start with creating Markov object. There are two optional arguments - prob and level. Default value for prob is  
-True and it means, that you want to prioritize more frequent connections of words. Change in only if you are  
-going for very random mishmash. Level means depth of Markov chains, I will try to explain it with this example.
+True and it means, that you want to prioritize more frequent connections of words. Level means depth of  
+Markov chains, I will try to explain it with this example -
 
 ```python
 Example sentence: "Hello world and hello to everyone."
@@ -34,7 +34,7 @@ script shoud continue generating or the string is good enought to be returned. D
 ```python
 lambda s: len(s.split()) > 10
 ```
-= return string if its lenght is 11.
+= return string if its lenght is 11. Check test.py for a more complex version of endf.
 
 Example
 -------

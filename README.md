@@ -7,9 +7,9 @@ Python script for generating random text strings.
 Usage
 -----
 
-Start with creating Markov object. There are two optional arguments - prob and level. Default value for prob is  
-True and it means, that you want to prioritize more frequent connections of words. Level means depth of  
-Markov chains, I will try to explain it with this example -
+Start with creating a Markov object. There are two optional arguments - prob and level. Default value for prob is  
+True and it means, that you want to prioritize the more frequent connections of words. Level means depth of  
+the chains, I will try to explain it with this example -
 
 ```python
 Example sentence: "Hello world and hello to everyone."
@@ -19,18 +19,18 @@ Level 3:  {("Hello","world","and"):"hello", ("world","and","hello"):"to", ("and"
 etc.
 ```
 
-Level 1 will produce very random mishmash of words, level 2 the standart pseudo-real text and then every next  
+Level 1 will produce a very random mishmash of words, level 2 the standart pseudo-real text and then every next  
 level will make the text more "connected", but its basically useless for our purpose without a very large text pool.  
 
-Then continue with parsing any ammount of text you like with parse(text) and generate random text with
-generate(). Generate takes two arguments - startf and endf. Startf is used to find beggining of string. Default value is 
+Then continue with parsing any ammount of text with parse(text) and generate a random text with
+generate(). It takes two arguments - startf and endf. Startf is used to find a beggining of the string. Default value is 
 ```python
 lambda: random.choice(filter(lambda v: v[0][0].isupper(), self._database))
 ```
 = choose random key which starts with uppercase. You can provide any function that returns key.
 
-Function endf is called every time new value is appended to the random string and its purpose is to check, if  
-script shoud continue generating or the string is good enought to be returned. Default value is
+Function endf is called every time a new value is appended to the random string and its purpose is to check if  
+script shoud continue generating or it is good enought to be returned. Default value is
 ```python
 lambda s: len(s.split()) > 10
 ```

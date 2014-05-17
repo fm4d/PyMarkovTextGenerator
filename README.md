@@ -42,13 +42,11 @@ and default value for ```endf```
 lambda s: len(s.split()) > 10
 ```
 
-
 Example
 ------  
-
 ```python
 m = Markov(prob=True, level=2)
-with open("text-test") as file:
+with open(some_text_file) as file:
     m.parse(file.read())
     print m.generate()
 ```

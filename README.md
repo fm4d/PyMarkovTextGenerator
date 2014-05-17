@@ -33,6 +33,15 @@ arguments like ```length``` etc. Both functions must return boolean value.
 ```startf``` is called at the begginng of generate with self._database (parsed data) as an argument.  
 ```endf``` is called after every iteration that append new value to quote string with that string as an argument.  
 
+Default value for ```startf``` is
+```python
+lambda db: random.choice(filter(lambda val: val[0][0].isupper(), db))
+```
+and default value for ```endf```
+```python
+lambda s: len(s.split()) > 10
+```
+
 ```python
 m = Markov(prob=True, level=2)
 with open("text-test") as file:

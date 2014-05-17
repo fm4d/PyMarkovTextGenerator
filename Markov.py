@@ -61,18 +61,24 @@ class Markov(object):
 
     def generate(self, startf=None, endf=None):
         """
-        startf and endf must return boolean, they are used to determine
-        start and end of generated quote. startf is called at beggining of
-        generate without parameters and endf is called after every iteration
-        with current quote as parameter
+        Generate a new random string specified with "startf" and "endf"
+
+        Arguments
+        startf: Is called at the begginng of generate with self._database
+                as argument. Must return boolean value.
+        endf: Is called after every iteration that append new value to
+              quote string with that string as argument. Must return boolean
+              value.
         """
+
+        # default values
         if startf is None:
-            startf = lambda: random.choice(filter(lambda v:
-                                           v[0][0].isupper(), self._database))
+            startf = lambda db: random.choice(filter(lambda val:
+                                              val[0][0].isupper(), db))
         if endf is None:
             endf = lambda s: len(s.split()) > 10
 
-        key = startf()
+        key = startf(self._database)
         if self._use_prob:
             value = self._choose_with_prob(self._database[key])
         else:

@@ -28,14 +28,15 @@ class Markov(object):
             for pos, val in enumerate(self._database[key]):
                 if val[0] == value:
                     val_pos = pos
+                    break
 
             if val_pos is None:
                 self._database[key].append((value, 1))
             else:
                 if self._use_prob:
-                    new_tuple = (self._database[key][val_pos][0],
+                    new_entry = (self._database[key][val_pos][0],
                                  self._database[key][val_pos][1] + 1)
-                    self._database[key][val_pos] = new_tuple
+                    self._database[key][val_pos] = new_entry
 
         else:
             self._database[key] = [(value, 1)]

@@ -1,5 +1,6 @@
 import Markov
 
+
 def end(s):
     interpunction = (".", "?", "!")
     if s[len(s)-1] in interpunction and len(s.split()) > 10:

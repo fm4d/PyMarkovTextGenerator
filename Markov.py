@@ -82,8 +82,7 @@ class Markov(object):
         if self._use_prob:
             value = self._choose_with_prob(self._database[key])
         else:
-            value = random.choice(self._database[key])
-            value = value[0]
+            value = random.choice(self._database[key])[0]
         quote = ""
 
         for i in range(self._level):

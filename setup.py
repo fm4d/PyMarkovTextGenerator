@@ -4,8 +4,8 @@ from distutils.core import setup
 url = 'https://github.com/FEE1DE4D/PyMarkovTextGenerator'
 setup(
     name='PyMarkovTextGenerator',
-    version='1.0.1',
-    py_modules=['Markov'],
+    version='1.0.2',
+    py_modules=['PyMarkovTextGenerator'],
 
     author='FEE1DE4D',
     author_email='fee1de4d@gmail.com',

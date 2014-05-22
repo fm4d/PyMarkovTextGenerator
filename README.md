@@ -4,6 +4,12 @@ PyMarkovTextGenerator
 Python script for generating random text strings.
 
 
+Installation
+-----------
+
+```pip install PyMarkovTextGenerator```
+
+
 Usage
 -----
 

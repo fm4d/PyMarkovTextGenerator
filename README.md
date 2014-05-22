@@ -7,9 +7,9 @@ Python script for generating random text strings.
 Usage
 -----
 
-Start with creating a Markov object. There are two optional arguments - ```prob``` and ```level```. Default value for ```prob``` is  
-```True``` and it means, that you want to prioritize the more frequent connections of words. ```level``` means a depth of  
-the chains, I will try to explain it with this example -
+Start with creating a Markov object. There are two optional arguments - ```prob``` and ```level```. Default value   
+for ```prob``` is ```True``` and it means, that you want to prioritize the more frequent connections of words.
+```level``` means a depth of  the chains, I will try to explain it with this example:
 
 ```python
 Example sentence: "Hello world and hello to everyone."
@@ -33,11 +33,11 @@ arguments like ```length``` etc. Both functions must return boolean value.
 ```startf``` is called at the begginng of generate with self._database (parsed data) as an argument.  
 ```endf``` is called after every iteration that append new value to quote string with that string as an argument.  
 
-Default value for ```startf``` is
+Default value for ```startf``` is:
 ```python
 lambda db: random.choice(filter(lambda val: val[0][0].isupper(), db))
 ```
-and default value for ```endf```
+And default value for ```endf```:
 ```python
 lambda s: len(s.split()) > 10
 ```

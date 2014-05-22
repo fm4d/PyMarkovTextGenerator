@@ -7,7 +7,9 @@ Python script for generating random text strings.
 Installation
 -----------
 
-```pip install PyMarkovTextGenerator```
+```
+pip install PyMarkovTextGenerator
+```
 
 
 Usage

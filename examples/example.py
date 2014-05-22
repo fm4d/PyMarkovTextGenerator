@@ -1,4 +1,4 @@
-import Markov
+from PyMarkovTextGenerator import Markov
 
 
 def end(s):

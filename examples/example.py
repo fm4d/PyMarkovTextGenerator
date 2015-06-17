@@ -8,7 +8,7 @@ def end(s):
     else:
         return False
 
-m = Markov.Markov(prob=True, level=2)
+m = Markov(prob=True, level=2)
 with open("text-test") as file:
     m.parse(file.read())
     print m.generate(endf=end)

@@ -121,7 +121,7 @@ class MarkovChain():
 
     def decache(self):
         """
-        Deleted cached value of startwords
+        Delete cached value of startwords
         """
         self._start_words = None
 

@@ -1,5 +1,5 @@
 This is a simple and probably quite inefficient pseudorandom text generator based on Markov chains.  
-It creates and stores chains for you, buy for any real use other than testing, you should reimplement demo functions.
+It creates and stores chains for you, but for any real use other than testing, you should reimplement demo functions.
 
 Example:
 ```python

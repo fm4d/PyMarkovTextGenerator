@@ -95,7 +95,7 @@ def parse(filename, encoding=None):
 
 class MarkovChain():
     """
-    Class representing single markov chain
+    Single markov chain 
     """
 
     def __init__(self, order, content=None):
@@ -127,7 +127,7 @@ class MarkovChain():
 
 class MarkovGenerator():
     """
-    Class representing markov chain based text generator
+    Base object used to build chains and generate sentences.
     """
 
     def __init__(self, shelve_file='chains_shelve'):
